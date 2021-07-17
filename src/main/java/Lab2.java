@@ -61,7 +61,7 @@ public class Lab2 {
         /* 檢查統一證(居留證)編號 */
         verifyNum = 0;// 將上一個身分證計算結果歸零
 
-        // [A-Z]{1}1碼 [1-2]{1}2碼 [0-9]{8}3到9碼, matches:是否完全符合數值
+        // [A-Z]{1}1碼 [A-D]{1}2碼 [0-9]{8}3到9碼, matches:是否完全符合數值
         if (str.matches("[A-Z]{1}[A-D]{1}[0-9]{8}")) {
 
             // 第一碼:Arrays.binarySearch(尋找陣列內是否有該數值，並回傳該數值位置(index)),
@@ -81,7 +81,7 @@ public class Lab2 {
             // System.out.println(verifyNum);
 
             verifyNum = (10 - (verifyNum % 10)) % 10;
-            // 檢查碼:將 (verifyNum % 10 = 1 -> 10 - 1 = 9 -> 9 % 10) = 9
+            // 檢查碼:將 (verifyNum % 10 = verifyNum -> 10 - verifyNum = verifyNum -> verifyNum % 10)
             // System.out.println(verifyNum);
             // System.out.println(Character.digit(strArr[9], 10));
 
