@@ -18,12 +18,12 @@ public class ConnMysqlText {
 
     //設定檔
     private static Connection getConnection() throws SQLException {
-        String serverName = "localhost";
-        String database = "java";
+        String serverName = "***";
+        String database = "***";
         String url = "jdbc:mysql://" + serverName + "/" + database;
         // 帳號和密碼
-        String user = "root";
-        String password = "a0909007892";
+        String user = "***";
+        String password = "***";
         return DriverManager.getConnection(url, user, password);
     }
 }
